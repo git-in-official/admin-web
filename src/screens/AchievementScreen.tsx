@@ -2,6 +2,7 @@ import { CheckCircleOutlined } from "@ant-design/icons";
 import { Button, Flex, Input, Upload } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import styled from "styled-components";
+import UploadButton from "../components/UploadButton";
 
 // const PreviewImage = styled.img`
 //   width: 100%;
@@ -78,6 +79,7 @@ const AchievementScreen = () => {
           // beforeUpload={beforeUpload}
           // onChange={onChange}
         >
+          <UploadButton loading={false} />
           {/* {imageUrl ? (
             <PreviewImage src={imageUrl} alt="avatar" />
           ) : (
