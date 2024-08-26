@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import RootScreen from "./screens/RootScreen";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 const App: React.FC = () => {
   const queryClient = new QueryClient({
@@ -9,11 +10,11 @@ const App: React.FC = () => {
         retry: 0,
       },
     },
-  })
+  });
 
   return (
     <QueryClientProvider client={queryClient}>
-      <RootScreen />
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 };
