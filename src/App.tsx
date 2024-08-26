@@ -1,6 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
+import RootScreen from "./screens/RootScreen";
 
 const App: React.FC = () => {
   const queryClient = new QueryClient({
@@ -14,7 +13,13 @@ const App: React.FC = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      {/* <BrowserRouter basename="https://git-in-official.github.io/admin-web">
+        <Routes>
+          <Route path="/" element={<RootScreen />} />
+        </Routes>
+      </BrowserRouter> */}
+      <RootScreen />
     </QueryClientProvider>
   );
 };
