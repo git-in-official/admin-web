@@ -9,10 +9,12 @@ export const http = axios.create({
   },
 });
 
+// 요청 시 토큰 넣는 코드.
 // http.interceptors.request.use(
 //   async config => {
+//     이 부분만 바꿔서 쓰면 됩니다.
 //     const token = await retrieve('accessToken');
-//     console.log('axios: ' + token);
+//     console.log(`axios: ${token}`);
 //     if (token) {
 //       config.headers.Authorization = `Bearer ${token}`;
 //     }
